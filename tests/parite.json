@@ -1,0 +1,52 @@
+[
+  {
+    "input": {
+      "karar_suresi_sn": 12.5,
+      "onceki_hata_sayisi": 0,
+      "karar_degistirme_sayisi": 1,
+      "sahne_zorlugu": 2,
+      "tereddut_suresi_sn": 3.2
+    },
+    "expected_proba": 0.46095584397718226
+  },
+  {
+    "input": {
+      "karar_suresi_sn": 45.0,
+      "onceki_hata_sayisi": 2,
+      "karar_degistirme_sayisi": 3,
+      "sahne_zorlugu": 4,
+      "tereddut_suresi_sn": 10.1
+    },
+    "expected_proba": 0.9529286060046661
+  },
+  {
+    "input": {
+      "karar_suresi_sn": 8.0,
+      "onceki_hata_sayisi": 0,
+      "karar_degistirme_sayisi": 0,
+      "sahne_zorlugu": 1,
+      "tereddut_suresi_sn": 1.0
+    },
+    "expected_proba": 0.20893108390212367
+  },
+  {
+    "input": {
+      "karar_suresi_sn": 30.2,
+      "onceki_hata_sayisi": 1,
+      "karar_degistirme_sayisi": 2,
+      "sahne_zorlugu": 3,
+      "tereddut_suresi_sn": 5.5
+    },
+    "expected_proba": 0.7928413310424476
+  },
+  {
+    "input": {
+      "karar_suresi_sn": 5.5,
+      "onceki_hata_sayisi": 0,
+      "karar_degistirme_sayisi": 0,
+      "sahne_zorlugu": 1,
+      "tereddut_suresi_sn": 0.8
+    },
+    "expected_proba": 0.20776038168495514
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "title": "The Primer v2 — Adaptif Yardım Modeli",
+  "description": "Oyuncunun öz bildirimine dayalı yardım ihtiyacı sınıflandırıcısı",
+  "target": "yardim_etkisi",
+  "class_labels": {
+    "0": "yardım gerekmez",
+    "1": "yardım gerekiyor"
+  },
+  "classes": [
+    "0",
+    "1"
+  ],
+  "features": [
+    {
+      "name": "karar_suresi_sn",
+      "label": "karar_suresi_sn",
+      "example": 6.98
+    },
+    {
+      "name": "onceki_hata_sayisi",
+      "label": "onceki_hata_sayisi",
+      "example": 0.0
+    },
+    {
+      "name": "karar_degistirme_sayisi",
+      "label": "karar_degistirme_sayisi",
+      "example": 0.0
+    },
+    {
+      "name": "sahne_zorlugu",
+      "label": "sahne_zorlugu",
+      "example": 1.0
+    },
+    {
+      "name": "tereddut_suresi_sn",
+      "label": "tereddut_suresi_sn",
+      "example": 3.11
+    }
+  ],
+  "decision_threshold": 0.6,
+  "evaluation_status": "demo_unverified",
+  "metrics": {
+    "accuracy": 0.78125,
+    "precision": 0.730769,
+    "recall": 1.0,
+    "f1": 0.844444,
+    "confusion_matrix": [
+      [
+        6,
+        7
+      ],
+      [
+        0,
+        19
+      ]
+    ],
+    "train_rows": 88,
+    "test_rows": 32,
+    "train_sessions": 11,
+    "test_sessions": 4,
+    "evaluation_type": "demo_session_split_synthetic_eval"
+  },
+  "training_rows": 120,
+  "real_session_count": 0,
+  "onnx_parity_max_abs_diff": 8.215757463236883e-08,
+  "onnx_input_name": "input",
+  "onnx_probability_output_name": "probabilities",
+  "seed": 13,
+  "sklearn_version": "1.5.0",
+  "python_version": "3.10"
+}

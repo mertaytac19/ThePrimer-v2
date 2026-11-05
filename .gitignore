@@ -1,0 +1,16 @@
+.venv/
+node_modules/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.bak
+_dist_cache/
+dist/
+coverage/
+cypress/videos/
+cypress/screenshots/
+data/collected/*.csv
+_out/model_previous/
+_out/model_candidate/

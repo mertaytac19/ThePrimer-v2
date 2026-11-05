@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="primer-model-base" content="../_out/model/">
+  <title>The Primer v2 | Hata Avcısı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <header class="masthead">
+      <p class="eyebrow">YAZILIM TESTİ · ADAPTİF HİKÂYE</p>
+      <h1>The Primer <span>v2</span> <small>— Hata Avcısı</small></h1>
+      <p class="tagline">Bir üretim krizini çöz. Kararlarını ölç. Modelin yardım kararını gözlemle.</p>
+      <div id="model-status" class="status" role="status" aria-live="polite" data-cy="model-status">Model bağlantısı
+        kontrol ediliyor…</div>
+    </header>
+
+    <section id="mode-picker" class="card mode-picker" aria-labelledby="mode-title">
+      <h2 id="mode-title">Oynama modu seç</h2>
+      <div class="mode-grid">
+        <button id="normal-mode" class="mode-option" data-cy="normal-mode"><strong>Oyun modu</strong><span>Gerçek ONNX
+            modeliyle uyarlanabilir ipuçları</span></button>
+        <button id="collection-mode" class="mode-option" data-cy="collection-mode"><strong>Veri Toplama
+            Modu</strong><span>İpucu gösterilmeden kendi ihtiyacını değerlendir; CSV indir</span></button>
+      </div>
+      <p class="fineprint">Veri Toplama Modu kişisel bilgi istemez; oturum yalnızca tarayıcında tutulur. Toplanan
+        kayıtları sen indirmedikçe sunucuya yüklemeyiz.</p>
+    </section>
+
+    <section id="game" hidden>
+      <div class="game-toolbar">
+        <strong id="mode-label">Oyun modu</strong>
+        <span id="scene-count" data-cy="scene-count">Sahne 1 / 8</span>
+        <button id="reset" class="quiet" data-cy="reset">Yeniden başlat</button>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Oyun ilerlemesi" aria-valuemin="0" aria-valuemax="100"
+        aria-valuenow="0">
+        <div id="progress" class="progress"></div>
+      </div>
+      <section id="scene" class="card scene" aria-labelledby="scene-title">
+        <div class="scene-meta"><span class="chip" id="difficulty"></span><span class="chip" id="scene-type">Teknik
+            görev</span></div>
+        <h2 id="scene-title" data-cy="scene-title"></h2>
+        <p id="story"></p>
+        <div id="hint-area" class="hint-area" hidden>
+          <button id="hint-btn" class="secondary" data-cy="hint-request">💡 İpucu iste</button>
+          <p id="hint-text" class="hint-text" hidden data-cy="hint-text"></p>
+        </div>
+        <div id="options" class="options" role="group" aria-label="Karar seçenekleri" data-cy="options"></div>
+        <button id="confirm" class="primary" disabled data-cy="confirm">Kararı onayla</button>
+      </section>
+      <section id="self-report" class="card survey" hidden aria-labelledby="survey-heading" data-cy="self-report">
+        <h3 id="survey-heading">Bu karar sırasında yardıma ihtiyaç duydun mu?</h3>
+        <p>Yanıtın modelin tahmininden bağımsız olarak kaydedilir. Ad veya e-posta alınmaz.</p>
+        <div class="survey-actions"><button id="need-help" class="primary" data-cy="need-help">Evet, ihtiyacım
+            vardı</button><button id="no-help" class="secondary" data-cy="no-help">Hayır</button></div>
+      </section>
+      <section id="feedback" class="feedback" role="status" aria-live="polite" data-cy="feedback"></section>
+      <section id="summary" class="card summary" hidden data-cy="summary"></section>
+      <section id="export-section" class="card export-section" hidden>
+        <h3>Oturum verilerini dışa aktar</h3>
+        <p>Her karar bir satırdır. Dosyayı saklayıp daha sonra diğer oturumlarla birleştirebilirsin.</p>
+        <button id="export-csv" class="secondary" data-cy="export-csv">CSV indir</button>
+        <span id="export-count"></span>
+      </section>
+      <details class="debug" id="dev-panel">
+        <summary>Geliştirici paneli · model ve ölçümler</summary>
+        <pre id="debug-output" data-cy="debug"></pre>
+      </details>
+    </section>
+    <footer>Öğrenci projesi · The Primer v2 · Eğitim amaçlı demo modelin güvenilirliği henüz doğrulanmamış olabilir.
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>
